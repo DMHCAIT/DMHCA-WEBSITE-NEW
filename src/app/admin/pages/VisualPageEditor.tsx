@@ -338,8 +338,8 @@ export default function VisualPageEditor({ initial }: { initial: PageRow[] }) {
                         <div>
                           <label className="block text-xs font-medium text-slate-600 mb-1">Image</label>
                           <ImageUploader 
-                            value={section.url || ''} 
-                            onChange={(url) => updateSection(section.id, { url })}
+                            currentUrl={section.url || ''} 
+                            onUrlChange={(url) => updateSection(section.id, { url })}
                             label="Upload Image"
                           />
                         </div>
